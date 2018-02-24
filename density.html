@@ -15,30 +15,39 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
 
 <style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.co { font-style: italic; } /* Comment */
+code > span.al { font-weight: bold; } /* Alert */
+code > span.er { font-weight: bold; } /* Error */
+code > span.wa { font-style: italic; } /* Warning */
+code > span.cf { font-weight: bold; } /* ControlFlow */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.do { font-style: italic; } /* Documentation */
+code > span.an { font-style: italic; } /* Annotation */
+code > span.cv { font-style: italic; } /* CommentVar */
+code > span.in { font-style: italic; } /* Information */
+</style>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
   }
 </style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
 
 
 <style type="text/css">
@@ -187,7 +196,7 @@ $(document).ready(function () {
   <a href="jobs.html">Jobs</a>
 </li>
 <li>
-  <a href="Density.html">Density</a>
+  <a href="density.html">Density</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -206,7 +215,23 @@ $(document).ready(function () {
 </div>
 
 
+<div id="life-expectancy-at-birth-vs-gdp-per-capita." class="section level2">
+<h2>Life expectancy at birth Vs GDP per capita.</h2>
+<p>The following file is a replicate of a graphic of Professor Hans Rosling in his presentation do not panic in which he try to explain the life expectancy at birth, in years and GDP per capita (US$, inflation-adjusted).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(gapminder)
+datos&lt;-gapminder
+datos2002&lt;-<span class="kw">subset</span>(datos, year<span class="op">==</span><span class="dv">2002</span>)
+datos1952&lt;-<span class="kw">subset</span>(datos, year<span class="op">==</span><span class="dv">1952</span>)
+datos1972&lt;-<span class="kw">subset</span>(datos, year<span class="op">==</span><span class="dv">1972</span>)
+datos1992&lt;-<span class="kw">subset</span>(datos, year<span class="op">==</span><span class="dv">1992</span>)
 
+<span class="kw">with</span>(datos2002, <span class="kw">plot</span>(lifeExp, gdpPercap, <span class="dt">pch=</span><span class="dv">19</span> ))</code></pre></div>
+<p><img src="density_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## Punto 5
+<span class="kw">with</span>(datos2002, <span class="kw">plot</span>(lifeExp, gdpPercap, <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="kw">c</span>(<span class="dt">Africa=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">Americas=</span><span class="st">&quot;green&quot;</span>, <span class="dt">Asia=</span><span class="st">&quot;red&quot;</span>, <span class="dt">Europea=</span><span class="st">&quot;yellow&quot;</span>, <span class="dt">Oceania=</span><span class="st">&quot;red&quot;</span>)))
+<span class="kw">legend</span>(<span class="st">&quot;topleft&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;Africa&quot;</span>, <span class="st">&quot;Americas&quot;</span>, <span class="st">&quot;Asia y Oceania&quot;</span>, <span class="st">&quot;Europa&quot;</span>), <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">title=</span><span class="st">&quot;Convenciones&quot;</span>, <span class="dt">col=</span><span class="kw">c</span>(<span class="dt">Africa=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">Americas=</span><span class="st">&quot;green&quot;</span>, <span class="dt">Asia=</span><span class="st">&quot;red&quot;</span>, <span class="dt">Europea=</span><span class="st">&quot;yellow&quot;</span>, <span class="dt">Oceania=</span><span class="st">&quot;red&quot;</span>))</code></pre></div>
+<p><img src="density_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+</div>
 
 
 
