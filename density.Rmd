@@ -1,3 +1,25 @@
 ---
 title: "Density"
 ---
+
+##Life expectancy at birth Vs GDP per capita. 
+
+The following file is a replicate of a  graphic of Professor Hans Rosling in his presentation do not panic in which he try to explain the life expectancy at birth, in years and GDP per capita (US$, inflation-adjusted).
+
+```{r}
+library(gapminder)
+datos<-gapminder
+datos2002<-subset(datos, year==2002)
+datos1952<-subset(datos, year==1952)
+datos1972<-subset(datos, year==1972)
+datos1992<-subset(datos, year==1992)
+
+with(datos2002, plot(lifeExp, gdpPercap, pch=19 ))
+
+
+## Punto 5
+with(datos2002, plot(lifeExp, gdpPercap, pch=19, col=c(Africa="blue", Americas="green", Asia="red", Europea="yellow", Oceania="red")))
+legend("topleft", c("Africa", "Americas", "Asia y Oceania", "Europa"), pch=19, title="Convenciones", col=c(Africa="blue", Americas="green", Asia="red", Europea="yellow", Oceania="red"))
+
+```
+
