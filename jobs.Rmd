@@ -3,3 +3,11 @@ title: "Some featured jobs"
 ---
 
 Here you can find my jobs and projectsI hope this list grows quickly and especially that it helps other people
+
+
+---
+title: "Final Work of Bayesian Statistic"
+
+A presentation of the final work of  the course bayesian statistic, here we replicated an article named _**"Improving the estimation of tuberculosis infection prevalence using T-cell-based assay and mixture models"(M. Pai, N. Dendukuri, L. Wang, R. Joshi, S.Kalantri, H. L. Rieder)**_ 
+
+-pdf: <a href="trabajo final bayesiana.pdf#" class= "download" title="final work"> Descargar aqui <\a>
