@@ -6,4 +6,6 @@ title: "My Website"
 
 
 
-you are visiting my personal website, this page was created for the seedbed of R of the National University of Colombia Sede Medellin to share and highlight the works and achievements; I hope you like it
+you are visiting my personal website, this page was created for the seedbed of R of the National University of Colombia Sede Medellin to share and highlight the works and achievements; I hope you like it.
+
+![](guatape.jpg)
